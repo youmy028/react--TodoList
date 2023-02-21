@@ -22,3 +22,14 @@ export const lastTodoIdAtom = atom({
     default: 0,
     effects_UNSTABLE: [persistAtomLastTodoId]
   });
+
+export const { persistAtom: persistAtomCommon } = recoilPersist({
+    key: "persistAtomCommon"
+  });
+  
+ export const TodoList__filterCompletedIndexAtom = atom({
+    key: "app/TodoList__filterCompletedIndexAtom",
+    default: 0,
+    effects_UNSTABLE: [persistAtomCommon]
+  });
+  
