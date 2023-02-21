@@ -51,7 +51,7 @@ export default function EditPage() {
         <Button type="submit" variant="contained">
           <span><i className="fa-solid fa-pen-to-square"></i></span>
           <span>&nbsp;&nbsp;</span>
-          <span>할 일 수정</span>
+          <span>{todo.id}번 할 일 수정</span>
         </Button>
       </form>
     </>
