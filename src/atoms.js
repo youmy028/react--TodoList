@@ -32,4 +32,8 @@ export const { persistAtom: persistAtomCommon } = recoilPersist({
     default: 0,
     effects_UNSTABLE: [persistAtomCommon]
   });
-  
+  export const TodoList__sortIndexAtom = atom({
+    key: "app/TodoList__sortIndexAtom",
+    default: 0,
+    effects_UNSTABLE: [persistAtomCommon],
+  });
