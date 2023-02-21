@@ -136,7 +136,7 @@ export default function TodoList() {
       </Tabs>
 
 
-      <div className="mt-4 px-4">
+      <div className="px-5 pb-6 sm:px-8 sm:pb-10">
         <ul>
           {sortedTodos.map((todo, index) => (
             <TodoListItem
