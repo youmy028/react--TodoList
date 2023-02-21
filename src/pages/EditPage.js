@@ -16,9 +16,9 @@ export default function EditPage() {
 
     const form = e.target;
 
-    if(form.regDate.value.length == 0 ){
+    if(form.performDate.value.length == 0 ){
       alert("날짜를 입력해주세요");
-      form.regDate.focus();
+      form.performDate.focus();
 
       return;
     }
@@ -28,19 +28,19 @@ export default function EditPage() {
       
       return;
     }
-    const newTodoId = todosStatus.modifyTodoById(todo.id, form.regDate.value, form.content.value); 
+    const newTodoId = todosStatus.modifyTodoById(todo.id, form.performDate.value, form.content.value); 
 
     
     noticeSnackbarStatus.open(`${todo.id}번 할일이 수정 되었습니다.`)
     
     navigate(-1);
   }
-  const regDateForInput = todo.regDate.substr(0, 16).replace(" ", "T");
+  const performDateForInput = todo.performDate.substr(0, 16).replace(" ", "T");
   
   return (
     <>
       <form className="flex-1 flex p-10 flex-col gap-7" onSubmit={onSubmit}>
-        <TextField label="언제 해야 하나요?" focused type="datetime-local" name="regDate" defaultValue={regDateForInput}/>
+        <TextField label="언제 해야 하나요?" focused type="datetime-local" name="performDate" defaultValue={performDateForInput}/>
         <TextField label="무엇을 해야하나요?" focused name="content"
         className="flex-1 flex "
         InputProps={{className:" flex-1 flex-col"}} 

@@ -10,9 +10,9 @@ export default function WritePage() {
 
     const form = e.target;
 
-    if(form.regDate.value.length == 0 ){
+    if(form.performDate.value.length == 0 ){
       alert("날짜를 입력해주세요");
-      form.regDate.focus();
+      form.performDate.focus();
 
       return;
     }
@@ -22,7 +22,7 @@ export default function WritePage() {
       
       return;
     }
-    const newTodoId = todosStatus.addTodo(form.regDate.value, form.content.value); 
+    const newTodoId = todosStatus.addTodo(form.performDate.value, form.content.value); 
 
     
     noticeSnackbarStatus.open(`${newTodoId}번 할일이 추가 되었습니다.`);
@@ -35,7 +35,7 @@ export default function WritePage() {
   return (
     <>
       <form className="flex-1 flex p-10 flex-col gap-7" onSubmit={onSubmit}>
-        <TextField label="언제 해야 하나요?" focused type="datetime-local" name="regDate"/>
+        <TextField label="언제 해야 하나요?" focused type="datetime-local" name="performDate"/>
         <TextField label="무엇을 해야하나요?" focused name="content"
         className="flex-1 flex "
         InputProps={{className:" flex-1 flex-col"}} 
