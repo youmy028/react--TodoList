@@ -34,9 +34,9 @@ export default function WritePage() {
       <form className="flex-1 flex p-10 flex-col gap-7" onSubmit={onSubmit}>
         <TextField label="언제 해야 하나요?" focused type="datetime-local" name="regDate"/>
         <TextField label="무엇을 해야하나요?" focused name="content"
-        className="flex-1 flex bg-red-500 "
-        InputProps={{className:"bg-blue-500 flex-1 flex-col"}} 
-        inputProps={{className:"!bg-pink-100 flex-1"}} 
+        className="flex-1 flex "
+        InputProps={{className:" flex-1 flex-col"}} 
+        inputProps={{className:" flex-1"}} 
         multiline/>
         <Button type="submit" variant="contained">
           <span><i className="fa-solid fa-pen-to-square"></i></span>
