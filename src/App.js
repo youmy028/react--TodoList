@@ -19,15 +19,14 @@ function App() {
     <>
       <AppBar position="static">
         <Toolbar>
-          <div className="flex-1"></div>
-          <span className="font-bold select-none">앱 이름</span>
+          <span className="font-bold select-none">l1li1li1l</span>
           <div className="flex-1 flex justify-end">
-            {location.pathname != "/write" && (
+            {location.pathname == "/main" && (
               <NavLink to="/write" className="select-none">
                 할 일 추가
               </NavLink>
             )}
-            {location.pathname == "/write" && (
+            {location.pathname != "/main" && (
               <NavLink to="/main" className="select-none">
                 리스트
               </NavLink>

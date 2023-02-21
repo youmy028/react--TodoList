@@ -25,7 +25,10 @@ export default function WritePage() {
     const newTodoId = todosStatus.addTodo(form.regDate.value, form.content.value); 
 
     
-    noticeSnackbarStatus.open(`${newTodoId}번 할일이 추가 되었습니다.`)
+    noticeSnackbarStatus.open(`${newTodoId}번 할일이 추가 되었습니다.`);
+
+    form.content.value="";
+    form.content.focus();
   }
 
   
